@@ -1,16 +1,25 @@
 #!/usr/bin/bash
 
+set -e
+
+PREINSTALL=.preinstall.sh
 SYSSOFT=.syssoft
-if [ -e "$SYSSOFT" ]; then
-	cat "$SYSSOFT" | xargs sudo apt install -y
-else
-	echo "$SYSSOFT not found, no system software will be installed."
+CUSTOMSOFT=.custominstall.sh
+
+if [ ! -f "$PREINSTALL" -o ! -f "$SYSSOFT" -o ! -f "$CUSTOMSOFT" ]; then
+	"$PREINSTALL or $SYSSOFT or $CUSTOMSOFT is missing."
+	exit 1
 fi
 
-CUSTOMSOFT=.customsoft.sh
-if [ -e "$CUSTOMSOFT" ]; then
-	chmod a+x "$CUSTOMSOFT"
-	./"$CUSTOMSOFT"
-else
-	echo "$CUSTOMSOFT not found, no custom software will be installed."
-fi
+echo "Starting the installation. . ."
+
+
+chmod a+x "$PREINSTALL"
+./"$PREINSTALL"
+
+cat "$SYSSOFT" | xargs sudo apt install -y
+
+chmod a+x "$CUSTOMSOFT"
+./"$CUSTOMSOFT"
+
+

@@ -1,0 +1,4 @@
+[list all manually installed packages on the machine - bottom ones are most relevant]
+zgrep 'Commandline: apt' /var/log/apt/history.log /var/log/apt/history.log.*.gz
+
+

@@ -8,5 +8,6 @@ neovim
 curl
 universal-ctags
 tree
-randa
-brnda
+test_randa
+test brnda
+bat

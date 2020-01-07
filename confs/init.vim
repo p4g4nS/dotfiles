@@ -78,8 +78,9 @@ endif
 Plug 'benmills/vimux'
 
 " fzf
-Plug 'junegunn/fzf', {'dir': '~/.fzf', 'do': './install --all'}
+Plug 'junegunn/fzf', {'dir': '~/.vim/plugged/fzf', 'do': './install --all'}
 Plug 'junegunn/fzf.vim'
+"Plug '~/.fzf'
 
 "scheme
 Plug 'chriskempson/base16-vim'

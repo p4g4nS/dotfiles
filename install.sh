@@ -9,7 +9,7 @@
 # PREINSTALL #
 ##############
 
-readonly FONTSRC=fonts
+readonly FONTSRC=.fonts
 readonly FONTDEST=~/.fonts
 readonly SETUPSRC=setup
 readonly PREINSTALL="${SETUPSRC}/preinstall.sh"

@@ -4,6 +4,7 @@
 
 # TODO: remember to check syssoftware if it exist in package manager, if not offer alternative or custom installation
 # TODO: remember to check syssoftware versions, if too low then offer alternative installation from web/git/etc.
+# TODO: automate exporting bookmarks and importing them through the shell - explore
 
 ##############
 # PREINSTALL #

@@ -137,6 +137,6 @@ main
 # INSTALL CUSTOM SOFTWARE #
 ###########################
 
-#chmod a+x "$CUSTOMSOFT"
-#./"$CUSTOMSOFT"
+# chmod a+x "$CUSTOMSOFT"
+# ./"$CUSTOMSOFT"
 

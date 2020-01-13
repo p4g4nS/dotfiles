@@ -16,3 +16,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 # chech which program to use first as precondition and then
 #  dispatch and use that dinamically
 nvim +'PlugInstall --sync' +qa
+
+wget https://releases.hashicorp.com/vagrant/2.2.6/vagrant_2.2.6_x86_64.deb
+sudo dpkg -i vagrant_2.2.6_x86_64.deb
